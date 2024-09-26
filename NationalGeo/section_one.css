@@ -1,0 +1,120 @@
+.animais_section_one {
+    padding: 20px;
+}
+
+.animais_list {
+    grid-column: 2;
+    height: 380px;
+    overflow: auto;
+    scrollbar-color: #fb5 #faf6ed;
+    cursor: pointer;
+}
+
+.animais_descricao {
+    grid-column: 3;
+}
+.animais_descricao section {
+    margin-bottom: 50px;
+}
+
+.animais_descricao h2 {
+    font-size: 1.3rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #e54;
+    margin-bottom: 15px; 
+}
+
+.animais_descricao h2::before {
+    content: "";
+    background: #fb5;
+    width: 30px;
+    height: 10px;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.animais_descricao p {
+    font-size: 1.1rem;
+    font-family: Helvetica, Arial;
+    text-align: justify;
+    line-height: 1.3;
+} 
+
+
+
+@media(max-width: 700px){
+    .animais_list{
+        grid-column: 1;
+        height: 265px;
+    }
+}
+
+@media(max-width: 500px){
+    .animais_list{
+        grid-column: 1/3;
+        height: 580px;
+    }
+    .animais_descricao{
+        grid-column: 1/3;
+    }
+
+    .animais_descricaoh2{
+        margin-top: 30px;
+    }
+}
+@media(max-width: 400px){
+    .animais_list{
+        height: 450px;
+    } 
+}
+
+/*Manipulando as classes para o uso no javascript, navegação por tab= ligar uma lista a outra */
+.js_tabDescricao section{
+    display: none;
+}
+
+.js_tabDescricao section.ativo{
+    display: block;
+}
+
+.js_tabDescricao section.ativo.show-right{
+    animation: show-right .7s forwards;
+}
+
+.js_tabDescricao section.ativo.show-down{
+    animation: show-down .7s forwards;
+}
+
+
+
+/* criando animação para exibição*/
+@keyframes show-right{
+    from{ /* deslocamento inicial*/
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0); /*horizontal,vetical,*/
+
+    }
+
+    to{ /* deslocamento final*/
+        opacity: 1;
+        transform: translate3d(0,0,0);
+
+    }
+
+}
+
+
+@keyframes show-down{
+    from{
+        opacity: 0;
+        transform: translate3d(0,-30px,0);
+    }
+
+    to{
+        opacity: 1;
+        transform: translate3d(0,0,0);
+    }
+}

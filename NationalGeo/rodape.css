@@ -1,0 +1,14 @@
+#rodape{
+    border: 4px solid rgba(128, 0, 128, 0);
+    grid-column: 1/5;
+    background-color: #fb5;
+
+}
+
+#rodape p{
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: bold;
+    padding: 20px;
+    text-align: center;
+}

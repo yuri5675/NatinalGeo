@@ -1,0 +1,37 @@
+.section_three{
+    border: 4px solid rgba(0, 128, 0, 0);
+}
+
+.section_three_mapa{
+    grid-column: 2;
+}
+
+.section_three_list_dados{
+    grid-column: 3;
+}
+
+.section_three_list_dados li{
+    font-size: 1rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+    margin-bottom: 7px;
+}
+
+.section_three_list_dados li::before{
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 7px;
+    background-color: #fb5;
+    margin-right: 10px;
+}
+
+@media(max-width: 700px){
+    .section_three_mapa{
+        grid-column: 1/3;
+    }
+    .section_three_list_dados{
+        grid-column: 1/3;
+    }
+
+}
