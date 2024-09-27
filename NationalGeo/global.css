@@ -13,8 +13,14 @@ font-family: "IBM Plex Mono", monospace;
 body{
     background-color: #faf6ed;
     color: #555;
+    
+  
+}
+
+.grid_container{
     display: grid;
     grid-template-columns: 1fr 120px minmax(300px, 800px) 1fr;
+
 }
 
 img{
