@@ -49,3 +49,30 @@ jsAcordion[0].nextElementSibling.classList.add('ativo');
 
 }
 initAccordion();
+
+
+function modal(){
+    const jacontainermodal=document.querySelector('[data-modal="jacontainermodal"]')
+    const jsBtnfechamodal=document.querySelector('[data-modal="jsBtnfechamodal"]')
+    const  buttonabrirmodal=document.querySelector('[data-modal="buttonabrirmodal"]')
+
+    buttonabrirmodal.addEventListener('click',abrirmodal)
+    function abrirmodal(event){
+        jacontainermodal.classList.add('ativo')
+
+
+
+    }
+
+  jsBtnfechamodal.addEventListener('click',fecharmodal)
+  function fecharmodal(event){
+    jacontainermodal.classList.remove('ativo')
+  }
+
+}
+
+modal();
+
+
+
+
